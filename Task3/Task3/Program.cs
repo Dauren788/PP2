@@ -8,55 +8,55 @@ namespace Task3
 {
     class Program
     {
-         static int[] MakeDoubleArray(int[] a)
+        static int[] MakeDoubleArray(int[] a)
+        {
+            int[] res = new int[a.Length * 2];
+
+            for (int i = 0; i < a.Length; ++i)
             {
-                int[] res = new int[a.Length * 2];
-
-                for (int i = 0; i < a.Length; ++i)
-                {
-                    res[2 * i] = res[2 * i + 1] = a[i];
-                }
-
-                return res;
+                res[2 * i] = res[2 * i + 1] = a[i];
             }
 
-            static int[] ReadData()
+            return res;
+        }
+
+        static int[] ReadData()
+        {
+            int x = int.Parse(Console.ReadLine());
+            string line = Console.ReadLine();
+            string[] parts = line.Split();
+            int[] t = new int[x];
+
+            for (int i = 0; i < x; ++i)
             {
-                int x = int.Parse(Console.ReadLine());
-                string line = Console.ReadLine();
-                string[] parts = line.Split();
-                int[] t = new int[x];
-
-                for (int i = 0; i < x; ++i)
-                {
-                    t[i] = int.Parse(parts[i]);
-                }
-
-                return t;
+                t[i] = int.Parse(parts[i]);
             }
 
-            static void PrintAnswer(int[] ans)
+            return t;
+        }
+
+        static void PrintAnswer(int[] ans)
+        {
+            foreach (var q in ans)
             {
-                foreach (var q in ans)
-                {
-                    Console.Write(q + " ");
-                }
-            }
-
-            static void Main(string[] args)
-            {
-                int[] t = ReadData();
-                int[] ans = MakeDoubleArray(t);
-                PrintAnswer(ans);
-
-
+                Console.Write(q + " ");
             }
         }
+
+        static void Main(string[] args)
+        {
+            int[] t = ReadData();
+            int[] ans = MakeDoubleArray(t);
+            PrintAnswer(ans);
+
+
+        }
     }
-    /*
-    0 -> 0 1 
-    1 -> 2 3
-    2 -> 4 5
-    3 -> 6 7
-    4 -> 8 9 
-    5 -> 10 11*/
+}
+/*
+0 -> 0 1 
+1 -> 2 3
+2 -> 4 5
+3 -> 6 7
+4 -> 8 9 
+5 -> 10 11*/

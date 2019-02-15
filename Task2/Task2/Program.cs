@@ -4,24 +4,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task2
+namespace task
 {
-    class Student
-    { public string name;
-        public string id;
-        public int year;
-        public Student(string name, string id, int year)
+    public class student
+    {
+        private string name;
+        private string id;
+        private int year;
+        public student(string NAME, string ID, int Year)
         {
-            this.name = name;
-            this.id = id;
-            this.year = year;
+            name = NAME;
+            id = ID;
+            year = Year;
         }
-        static void Main(string[] args)
-            {
-                Student s1 = new Student("Dauren", "18BD111158", 1);
-                Console.WriteLine(s1.name + " " + s1.id + " " + s1.year);
-                Console.ReadKey();
-            }
+        public void output()
+        {
+            Console.WriteLine(name + " " + id + " " + " " + year);
         }
-    } 
+        public int increment()
+        {
+            return year++;
+        }
+    }
+    class Program
+    {
 
+        static void Main(string[] args)
+        {
+            string s = Console.ReadLine();
+            string i = Console.ReadLine();
+            int y = int.Parse(Console.ReadLine());
+            student s1 = new student(s, i, y);
+            s1.increment();
+            s1.output();
+        }
+    }
+}
