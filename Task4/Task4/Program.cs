@@ -12,9 +12,9 @@ namespace Task4
         {
             int n;
             n = int.Parse(Console.ReadLine());
-            for(int i = 1; i <= n; i++)
+            for (int i = 1; i <= n; i++)
             {
-                for(int j = 1; j <= i; j++)
+                for (int j = 1; j <= i; j++)
                 {
                     Console.Write("[*]");
                 }
@@ -23,3 +23,9 @@ namespace Task4
         }
     }
 }
+/*
+ 4
+ * 
+ * *
+ * * *
+ * * * * */

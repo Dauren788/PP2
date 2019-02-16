@@ -8,7 +8,7 @@ namespace task
 {
     public class student
     {
-        private string name;
+        private string name;//parametres of class
         private string id;
         private int year;
         public student(string NAME, string ID, int Year)
@@ -19,14 +19,14 @@ namespace task
         }
         public void output()
         {
-            Console.WriteLine(name + " " + id + " " + " " + year);
+            Console.WriteLine(name + " " + id + " " + " " + year); //show the parametres
         }
         public int increment()
         {
             return year++;
         }
     }
-    class Program
+    class Program 
     {
 
         static void Main(string[] args)
@@ -35,7 +35,7 @@ namespace task
             string i = Console.ReadLine();
             int y = int.Parse(Console.ReadLine());
             student s1 = new student(s, i, y);
-            s1.increment();
+            s1.increment();                       //use function
             s1.output();
         }
     }
